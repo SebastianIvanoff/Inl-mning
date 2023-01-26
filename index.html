@@ -1,65 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
+      <form id="form-todo" class="form-todo">
+        <label for="form">Todo Form</label>
+        <input type="text" class="form" id="form" />
+        <button>Submit</button>
+      </form>
 
-        
-<form class="form-todo">
-            <label for="form">Todo Form</label>
-            <input type="text" class="form" id="form">
-            <button>Submit</button>
-        </form>
+     <div class="todo-list"></div>
+             <div id="todo" class="todo">
+               
+                 <p class="todo-title">
+                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+                   perspiciatis?.
+                 </p>
+                 <p class="status">Status: Complete</p>
+              
+               <button id="btn" class="delete">X</button>
+             </div>
+     </div>
+      
 
-        <div class="todo">
-<p class="todo-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, perspiciatis?.</p>
-<p class="status">Status: Complete</p>
-        </div>
-        <div class="todo">
-<p class="todo-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, perspiciatis?.</p>
-<p class="status">Status: Complete</p>
-        </div>
-        <div class="todo">
-<p class="todo-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, perspiciatis?.</p>
-<p class="status">Status: Complete</p>
-        </div>
-        <div class="todo">
-<p class="todo-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, perspiciatis?.</p>
-<p class="status">Status: Complete</p>
-        </div>
-        <div class="todo">
-<p class="todo-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, perspiciatis?.</p>
-<p class="status">Status: Complete</p>
-        </div>
-        <div class="todo">
-<p class="todo-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, perspiciatis?.</p>
-<p class="status">Status: Complete</p>
-        </div>
-        <div class="todo">
-<p class="todo-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, perspiciatis?.</p>
-<p class="status">Status: Complete</p>
-        </div>
-        <div class="todo">
-<p class="todo-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, perspiciatis?.</p>
-<p class="status">Status: Complete</p>
-        </div>
-        <div class="todo">
-<p class="todo-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, perspiciatis?.</p>
-<p class="status">Status: Complete</p>
-        </div>
-        <div class="todo">
-<p class="todo-title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, perspiciatis?.</p>
-<p class="status">Status: Complete</p>
-        </div>
-
+      <script src="script.js"></script>
     </div>
-
-    <script src="script.js"></script>
-</body>
+  </body>
 </html>
