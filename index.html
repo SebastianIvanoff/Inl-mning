@@ -9,27 +9,22 @@
   </head>
   <body>
     <div class="container">
-      <form id="form-todo" class="form-todo">
-        <label for="form">Todo Form</label>
-        <input type="text" class="form" id="form" />
+      <form id="form" class="form">
+        <label for="todo-form" class="form-label">Todo Form</label>
+        <input type="text" placeholder="Todo" name="todo-form" id="todo-input"/>
         <button>Submit</button>
       </form>
 
-     <div class="todo-list"></div>
-             <div id="todo" class="todo">
-               
-                 <p class="todo-title">
-                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-                   perspiciatis?.
-                 </p>
-                 <p class="status">Status: Complete</p>
-              
-               <button id="btn" class="delete">X</button>
-             </div>
-     </div>
-      
-
-      <script src="script.js"></script>
+      <div class="todo-list" id="todo-list">
+        <div class="todo">
+          <p class="todo-title">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, ipsa!
+          </p>
+          <p class="todo-status">Status: Completed</p>
+        </div>
+        
+      </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
