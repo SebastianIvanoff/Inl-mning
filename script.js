@@ -3,6 +3,7 @@ const todos = [];
 
 const todoList = document.querySelector("#todo-list");
 const form = document.querySelector("#form");
+const input = document.querySelector("#todo-input");
 
 const getTodos = async () => {
   const res = await fetch(BASE_URL);
@@ -35,26 +36,34 @@ const createTodoElement = (todoData) => {
   title.classList.add("todo-title");
   title.innerText = todoData.title;
 
-  let status = document.createElement("p");
-  status.classList.add("todo-status");
-  status.innerText = todoData.completed;
-
   let button = document.createElement("button");
   button.classList.add("delete");
   button.innerText = "Delete";
 
   todo.appendChild(title);
-  todo.appendChild(status);
   todo.appendChild(button);
 
   return todo;
+};
+
+const validateForm = () => {
+  if (input.value.trim() === "") {
+    console.log("Du måste skriva en todo");
+    input.classList.add("error");
+    input.classList.remove("succes");
+    return false;
+  } else {
+    input.classList.add("success");
+    input.classList.remove("error");
+    return true;
+  }
 };
 
 const handleSubmit = (e) => {
   e.preventDefault();
 
   const newTodo = {
-    title: document.querySelector("#todo-input").value,
+    title: input.value,
   };
 
   fetch(BASE_URL, {
@@ -67,10 +76,12 @@ const handleSubmit = (e) => {
     .then((response) => response.json())
     .then((data) => {
       todos.push(data);
-      
+
       const todoElement = createTodoElement(data);
       todoList.appendChild(todoElement);
     });
+
+  validateForm();
 };
 
 todoList.addEventListener("click", (e) => {
@@ -80,8 +91,7 @@ todoList.addEventListener("click", (e) => {
 
   fetch(BASE_URL + e.target.id, {
     method: "DELETE",
-  })
-    .then(res => {
+  }).then((res) => {
     console.log(res);
     if (res.ok) {
       e.target.remove();

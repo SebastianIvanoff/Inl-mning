@@ -67,6 +67,23 @@ padding: 2rem;
 }
 
 .delete{
-  background-color: red;
+  background-color: #be1b1b;
   cursor: pointer;
+}
+
+.error {
+  border: 3px solid #be1b1b;
+}
+.success {
+  border: 3px solid #4caf50;
+}
+
+.invalid-feedback {
+  color: #be1b1b;
+  font-size: .9rem;
+  display: none;
+}
+
+.error ~ .invalid-feedback{
+  display: block;
 }
